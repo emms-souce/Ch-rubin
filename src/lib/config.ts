@@ -1,4 +1,4 @@
-import type { Service, ContactInfo, NavItem } from '@/types'
+import type { Service, NavItem } from '@/types'
 
 // Configuration du site
 export const siteConfig = {
@@ -20,7 +20,8 @@ export const siteConfig = {
     weekend: "Samedi: 8h00 - 17h00 (sur rendez-vous)"
   },
   reseauxSociaux: {
-    facebook: "https://facebook.com/cnconstruction77"
+    facebook: "https://facebook.com/cnconstruction77",
+    linkedin: "https://linkedin.com/in/cherubin-ngongang-btp"
   },
   experience: "7 ans",
   specialite: "Maçonnerie traditionnelle et moderne",

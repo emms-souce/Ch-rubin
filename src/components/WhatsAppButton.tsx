@@ -5,14 +5,14 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { MessageCircle, X, Phone, Clock, Zap } from 'lucide-react'
+import { MessageCircle, Phone, Clock, Zap } from 'lucide-react'
 import { useWhatsApp } from '@/hooks/useWhatsApp'
 import { messagesWhatsApp } from '@/lib/config'
 
 export default function WhatsAppButton() {
   const [isVisible, setIsVisible] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
-  const { openWhatsAppWithPreset, openWhatsApp } = useWhatsApp()
+  const { openWhatsAppWithPreset } = useWhatsApp()
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -121,17 +121,17 @@ export default function WhatsAppButton() {
 
                   <Card 
                     className="cursor-pointer hover:shadow-md transition-shadow"
-                    onClick={() => handleQuickContact('consultation')}
+                    onClick={() => handleQuickContact('rdv')}
                   >
                     <CardHeader className="pb-2">
                       <CardTitle className="text-sm flex items-center space-x-2">
                         <Clock className="h-4 w-4 text-construction-blue" />
-                        <span>Consultation</span>
+                        <span>Rendez-vous</span>
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
                       <CardDescription className="text-xs">
-                        Planifier une consultation technique
+                        Planifier un rendez-vous pour votre projet
                       </CardDescription>
                     </CardContent>
                   </Card>
